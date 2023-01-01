@@ -13,7 +13,7 @@ describe("/getCustomersWhoMadePurchase",  () => {
 
       expect(response.body[1].id).toEqual("c3");
       expect(response.body[1].firstname).toEqual("Carter");
-      expect(response.body[1].lastname).toEqual("Cookie");
+      expect(response.body[1].lastname).toEqual("Cooke");
 
       expect(response.body[2].id).toEqual("c2");
       expect(response.body[2].firstname).toEqual("Lennon");
@@ -34,7 +34,7 @@ describe("/getCustomersWhoBoughtMoreThanOne",  () => {
   
         expect(response.body[1].id).toEqual("c3");
         expect(response.body[1].firstname).toEqual("Carter");
-        expect(response.body[1].lastname).toEqual("Cookie");
+        expect(response.body[1].lastname).toEqual("Cooke");
     })
 })
 
