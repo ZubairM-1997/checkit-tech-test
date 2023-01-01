@@ -1,0 +1,79 @@
+openapi: 3.0.0
+
+info:
+  version: 1.0.0
+  title: Customer Purchase API
+  description: An API for retrieving information about customer purchases
+
+servers:
+  - url: http://localhost:8000/
+
+paths:
+  /getCustomersWhoMadePurchase:
+    get:
+      summary: Get a list of customers who made at least one purchase
+      responses:
+        200:
+          description: A list of customer objects
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    id:
+                      type: string
+                      description: The customer ID
+                    firstname:
+                      type: string
+                      description: The customer's first name
+                    lastname:
+                      type: string
+                      description: The customer's last name
+
+  /getCustomerEachProduct:
+    get:
+      summary: Get the number of purchases per each customer per each product
+      responses:
+        200:
+          description: An array of objects containing customer and product information and the number of purchases
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    customerName:
+                      type: string
+                      description: The customer's full name
+                    productName:
+                      type: string
+                      description: The product name
+                    numberOfPurchases:
+                      type: integer
+                      description: The number of purchases made by the customer for this product
+
+  /getCustomersWhoBoughtMoreThanOne:
+    get:
+      summary: Get a list of customers who made more than one purchase
+      responses:
+        200:
+          description: A list of customer objects
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    id:
+                      type: string
+                      description: The customer ID
+                    firstname:
+                      type: string
+                      description: The customer's first name
+                    lastname:
+                      type: string
+                      description: The customer's last name

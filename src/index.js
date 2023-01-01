@@ -105,3 +105,7 @@ app.get('/getCustomersWhoBoughtMoreThanOne', (req, res) => {
 app.listen(port, () => {
     console.log(`Listening to requests on localhost on port ${port}`)
 })
+
+module.exports = {
+    app
+}

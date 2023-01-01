@@ -1,0 +1,36 @@
+const request = require("supertest")
+const app = require('../index').app
+
+describe("/getCustomersWhoMadePurchase",  () => {
+    test("The response is returned with correct format", async () => {
+        const response = await request(app)
+        .get("/getCustomersWhoMadePurchase")
+        .set("Content-Type", "application/json")
+
+      expect(response.body[0].id).toEqual("c1");
+      expect(response.body[1].id).toEqual("c3");
+      expect(response.body[2].id).toEqual("c2");
+
+    })
+})
+
+describe("/getCustomersWhoBoughtMoreThanOne",  () => {
+    test("The response is returned with correct format", async () => {
+        const response = await request(app)
+        .get("/getCustomersWhoBoughtMoreThanOne")
+        .set("Content-Type", "application/json")
+
+      expect(response.body[0].id).toEqual("c1");
+      expect(response.body[1].id).toEqual("c3");
+    })
+})
+
+describe("/getCustomerEachProduct",  () => {
+    test("The response is returned with correct format", async () => {
+        const response = await request(app)
+        .get("/getCustomerEachProduct")
+        .set("Content-Type", "application/json")
+
+      expect(response.body.length).toEqual(16)
+    })
+})
