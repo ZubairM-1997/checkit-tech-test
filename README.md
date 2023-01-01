@@ -9,7 +9,7 @@ To see all the tests that are passing, exit the docker container and enter the c
 
 To see the Open API documentation, go to the url `localhost:8000/api-docs` which will show the documentation of the following endpoints
 
-`/getCustomersWhoMadePurchase` - gets a list of customers who made atleast one purchase
-`/getCustomerEachProduct` - get the number of purchases per each customer per each product
-`/getCustomersWhoBoughtMoreThanOne` - gets a list of customers who made more than one purchase
+1) `/getCustomersWhoMadePurchase` - gets a list of customers who made atleast one purchase
+2) `/getCustomerEachProduct` - get the number of purchases per each customer per each product
+3) `/getCustomersWhoBoughtMoreThanOne` - gets a list of customers who made more than one purchase
 
