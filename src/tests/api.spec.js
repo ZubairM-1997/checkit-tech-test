@@ -39,7 +39,7 @@ describe("/getCustomersWhoBoughtMoreThanOne",  () => {
 })
 
 describe("/getCustomerEachProduct",  () => {
-    test("The response is returned with correct format", async () => {
+    test("The response is returned with correct length", async () => {
         const response = await request(app)
         .get("/getCustomerEachProduct")
         .set("Content-Type", "application/json")
