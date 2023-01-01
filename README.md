@@ -15,4 +15,6 @@ To see the Open API documentation, go to the url `localhost:8000/api-docs` which
 
 ![docs](api_docs.png)
 
+![swimlanes](swimlanes.png)
+
 
