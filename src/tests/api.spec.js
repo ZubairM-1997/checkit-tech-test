@@ -8,8 +8,16 @@ describe("/getCustomersWhoMadePurchase",  () => {
         .set("Content-Type", "application/json")
 
       expect(response.body[0].id).toEqual("c1");
+      expect(response.body[0].firstname).toEqual("Isa");
+      expect(response.body[0].lastname).toEqual("Smith");
+
       expect(response.body[1].id).toEqual("c3");
+      expect(response.body[1].firstname).toEqual("Carter");
+      expect(response.body[1].lastname).toEqual("Cookie");
+
       expect(response.body[2].id).toEqual("c2");
+      expect(response.body[2].firstname).toEqual("Lennon");
+      expect(response.body[2].lastname).toEqual("Willis");
 
     })
 })
@@ -20,8 +28,13 @@ describe("/getCustomersWhoBoughtMoreThanOne",  () => {
         .get("/getCustomersWhoBoughtMoreThanOne")
         .set("Content-Type", "application/json")
 
-      expect(response.body[0].id).toEqual("c1");
-      expect(response.body[1].id).toEqual("c3");
+        expect(response.body[0].id).toEqual("c1");
+        expect(response.body[0].firstname).toEqual("Isa");
+        expect(response.body[0].lastname).toEqual("Smith");
+  
+        expect(response.body[1].id).toEqual("c3");
+        expect(response.body[1].firstname).toEqual("Carter");
+        expect(response.body[1].lastname).toEqual("Cookie");
     })
 })
 
