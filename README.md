@@ -1,7 +1,7 @@
 ## CheckIt Technical Test
 
 ## Getting Started 
-To start the docker container which runs the main application code, enter the command `docker build -t checkit-tech-test` 
+To start the docker container which runs the main application code, enter the command `docker build -t checkit-tech-test .` 
 
 To run it on localhost:8000, enter the command `docker run -p 8000:8000 checkit-tech-test`
 
