@@ -13,3 +13,6 @@ To see the Open API documentation, go to the url `localhost:8000/api-docs` which
 2) `/getCustomerEachProduct` - get the number of purchases per each customer per each product
 3) `/getCustomersWhoBoughtMoreThanOne` - gets a list of customers who made more than one purchase
 
+![docs](api_docs.png)
+
+
